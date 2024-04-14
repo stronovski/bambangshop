@@ -77,6 +77,11 @@ This is the place for you to write reflections:
 ### Mandatory (Publisher) Reflections
 
 #### Reflection Publisher-1
+1. Jika menggunakan design pattern observer yang terdiri dari berbagai macam class karena terdiri dari berbagai jeni, maka diperlukan suatu observer yang menggunakan trait. Dalam case BambangShop, observer hanya terdiri dari satu class yaitu Subscriber sehingga untuk saat ini belum memerlukan pembuatan suatu trait
+
+2. Penggunaan DashMap diperlukan agar dapat memetakan tiap jenis produk ke subscriber yang membutuhkan. Penggunaan Vector dapat diimplementasikan, tetapi akan memerlukan dua vector untuk masing-masing produk sehingga dapat mempersulit perubahan data.
+
+3. Karena map SUBSCRIBER akan diakses melalui banyak thread, penggunaan DashMap dapat diimplementasikan ke dalam program karena sifatnya yang dapat mengakomodasi keperluan program yang multithreaded. Singleton sendiri digunakan untuk memastikan bahwa hanya ada satu instance dari program tersebut yang mana dalam konteks ini digunakan supaya pengembang dapat selalu memastikan bahwa produk tidak berada di struktur data lain yang berbeda.
 
 #### Reflection Publisher-2
 
