@@ -84,5 +84,10 @@ This is the place for you to write reflections:
 3. Karena map SUBSCRIBER akan diakses melalui banyak thread, penggunaan DashMap dapat diimplementasikan ke dalam program karena sifatnya yang dapat mengakomodasi keperluan program yang multithreaded. Singleton sendiri digunakan untuk memastikan bahwa hanya ada satu instance dari program tersebut yang mana dalam konteks ini digunakan supaya pengembang dapat selalu memastikan bahwa produk tidak berada di struktur data lain yang berbeda.
 
 #### Reflection Publisher-2
+l. Untuk memisahkan fungsionalitas agar dapat mengimplementasikan single responsibility principle, service perlu dipisahkan dari Repository. Dengan adanya pemisahan service, modul-modul yang berfungsi untuk mendapatkan dan mengolah data didapatkan dari Repository sedangkan Layer Repository berfungsi sebagai layer yang berguna untuk mengakses basis data dan melakukan perubahan terhadap isi database, sehingga berperan dalam code maintainability
+
+2. Dalam suatu skenario di mana hanya digunakan model tanpa adanya layer yang lain, maka program akan memiliki interdependensi tinggi terhadap modul-modul yang lain sehingga jika terdapat suatu perubahan di dalam kode, maka akan diperlukan banyak perubahan lain di dalam kode untuk menyesuaikan perubahan tersebut.
+
+3. Postman merupakan sebuah tool yang sangat membantu dalam pengembangan aplikasi karena dapat membantu pengembang untuk menguji apakah aplikasi dapat berjalan dengan baik dengan melihat apakah aplikasi dapat mengembalikan respon yang sesuai berdasarkan request yang dibuat.
 
 #### Reflection Publisher-3
