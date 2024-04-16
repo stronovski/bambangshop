@@ -91,3 +91,8 @@ l. Untuk memisahkan fungsionalitas agar dapat mengimplementasikan single respons
 3. Postman merupakan sebuah tool yang sangat membantu dalam pengembangan aplikasi karena dapat membantu pengembang untuk menguji apakah aplikasi dapat berjalan dengan baik dengan melihat apakah aplikasi dapat mengembalikan respon yang sesuai berdasarkan request yang dibuat.
 
 #### Reflection Publisher-3
+1. Dalam tutorial ini, digunakan push model yang dapat terlihat dari modul objek seperti create, delete, update yang mana notification service akan melakukan iterasi ke seluruh list of subscribers untuk mendapatkan update terbaru
+
+2. Dengan menggunakan metode Pull, maka terdapat kebebasan bagi observer dalam menentukan data apa saja yang diambil atau kapan diambil. Meskipun begitu, observer perlu mengetahui struktur dari data source dan pengiriman notification menjadi tidak real-time.
+
+3. Jika program tidak menggunakan multithreading, maka program akan memiliki antrian yang panjang ketika pengiriman notifikasi perlu menunggu notifikasi yang lain untuk selesai terlebih dahulu sehingga menganggu performance aplikasi.
